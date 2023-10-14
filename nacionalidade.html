@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>De onde você é</h1>
+    Você veio do <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="verificar" onclick="verificarPais()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function verificarPais() {
+            var pais = document.getElementById('txtpais').value;
+            var res = document.getElementById('res');
+
+            res.innerHTML = "Você atualmente mora no " + pais;
+
+            if (pais.toLowerCase() === 'brasil') { // Usando toLowerCase para tornar a comparação case-insensitive
+                res.innerHTML += ". Você é brasileiro";
+            } else {
+                res.innerHTML += ". Você é estrangeiro";
+            }
+        }
+    </script>
+</body>
+</html>
+ 
